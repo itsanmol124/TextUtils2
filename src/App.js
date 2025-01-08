@@ -6,10 +6,10 @@ import {
 } from "react-router-dom";
 
 import "./App.css";
-import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import Alert from "./components/Alert";
+import About from "./components/About";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -44,7 +44,7 @@ function App() {
         <Alert alert={alert} />
         <div className="container my-3">
           <Routes>
-            <Route exact path="/about" element={<About />} />
+            <Route path="/about" element={<About />} />
             <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Try TextUtils - Word & Character Counter, Remove Extra Spaces..." />} />
           </Routes>
         </div>
